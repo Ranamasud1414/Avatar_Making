@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="avtar.css">
+    <title>api</title>
+</head>
+<body>
+    <section>
+    <h1>Which  Avtar like You... </h1>
+    <div class="centerDiv">
+        <div class="details">
+            <label for="">Enter Your name</label><br>
+            <input type="text" name="" id="nameid">
+
+        </div>
+        <div class="imgdiv">
+            <img src="apiimg/dra.jpg" alt="" width="200px" height="200" id="imagechange">
+        </div>
+        <button>click me</button>
+    </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const a=$('#nameid').val();
+                
+                $('#imagechange').attr('src',`https://joeschmoe.io/api/v1/${a}`)
+            });
+        });
+    </script>
+</body>
+</html>
